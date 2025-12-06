@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tournaments – Singularity E-Sports</title>
+
+    <!-- ✅ GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- ✅ MAIN STYLES -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ✅ SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <a href="home.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="hamburger" onclick="toggleSidebar()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="nav-title">Singularity E-Sports</div>
+
+        <div class="nav-right">
+            <div class="profile-circle"></div>
+        </div>
+    </nav>
+
+    <!-- ✅ MAIN CONTENT -->
+    <main class="container">
+
+        <!-- HERO -->
+        <section class="hero-box reveal">
+            <h2>Upcoming Tournaments</h2>
+        </section>
+
+        <!-- CONTENT -->
+        <section class="lower-section">
+
+            <div class="small-image-box reveal"></div>
+
+            <div class="text-box reveal">
+                <p>
+                    Stay up to date with our latest tournament entries, league matches,
+                    and competitive events.
+                    <br><br>
+                    New tournaments will be announced soon — stay tuned for brackets,
+                    team schedules, and live results.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ✅ JAVASCRIPT (SIDEBAR + SCROLL REVEALS) -->
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("open");
+        }
+
+        // SCROLL ANIMATION
+        const reveals = document.querySelectorAll(".reveal");
+
+        function animateOnScroll() {
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 120;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", animateOnScroll);
+        animateOnScroll();
+    </script>
+
+</body>
+</html>

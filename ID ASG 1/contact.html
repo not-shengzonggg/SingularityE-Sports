@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – Singularity E-Sports</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#" class="close-btn" onclick="toggleSidebar()">×</a>
+        <a href="home.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="hamburger" onclick="toggleSidebar()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="nav-title">Singularity E-Sports</div>
+        <div class="nav-right"><div class="profile-circle"></div></div>
+    </nav>
+
+    <div class="page-content">
+        <h1>Contact</h1>
+        <p>You can reach us at: singularity-esports@example.com</p>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>
