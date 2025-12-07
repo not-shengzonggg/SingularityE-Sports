@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Teams – Singularity E-Sports</title>
 
-    <!-- ✅ GOOGLE FONTS -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- ✅ MAIN STYLES -->
+    <!-- Main Styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- ✅ TEAM CARD STYLES -->
+    <!-- Team Card Styles -->
     <style>
         .team-grid {
             display: grid;
@@ -38,6 +38,8 @@
             background: linear-gradient(135deg, #2563eb, #7c3aed);
             border-radius: 12px;
             margin-bottom: 15px;
+            background-size: cover;
+            background-position: center;
         }
 
         .player-name {
@@ -55,7 +57,7 @@
 
 <body>
 
-    <!-- ✅ SIDEBAR -->
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">×</button>
         <a href="home.html">Home</a>
@@ -65,7 +67,7 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- ✅ NAVBAR -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="hamburger" onclick="toggleSidebar()">
@@ -80,79 +82,44 @@
         </div>
     </nav>
 
-    <!-- ✅ MAIN CONTENT -->
+    <!-- Main Content -->
     <main class="container">
 
-        <!-- HERO -->
+        <!-- Hero -->
         <section class="hero-box reveal">
             <h2>Our Teams</h2>
         </section>
 
-        <!-- TEAM GRID -->
+        <!-- Team Grid -->
         <section class="team-grid reveal">
 
             <div class="team-card">
-                <div class="player-img"></div>
+                <div class="player-img" id="valorant-img"></div>
                 <div class="player-name">VALORANT</div>
                 <div class="player-role">APAC Region</div>
             </div>
 
-            <!-- PLAYER 2 -->
             <div class="team-card">
-                <div class="player-img"></div>
+                <div class="player-img" id="mlbb-img"></div>
                 <div class="player-name">MLBB</div>
                 <div class="player-role">SG</div>
             </div>
 
-            <!-- PLAYER 3 -->
             <div class="team-card">
-                <div class="player-img"></div>
+                <div class="player-img" id="lol-img"></div>
                 <div class="player-name">League of Legends</div>
                 <div class="player-role">APAC Region</div>
             </div>
 
-            <!-- PLAYER 4 -->
             <div class="team-card">
-                <div class="player-img"></div>
+                <div class="player-img" id="sf-img"></div>
                 <div class="player-name">Street Fighter</div>
                 <div class="player-role">SG</div>
             </div>
 
         </section>
 
-    </main>
-
-            <!-- TEAM GRID -->
-        <section class="team-grid reveal">
-            <div class="team-card">
-                <div class="player-img"></div>
-                <div class="player-name">VALORANT</div>
-                <div class="player-role">APAC Region</div>
-            </div>
-
-            <div class="team-card">
-                <div class="player-img"></div>
-                <div class="player-name">MLBB</div>
-                <div class="player-role">SG</div>
-            </div>
-
-            <div class="team-card">
-                <div class="player-img"></div>
-                <div class="player-name">League of Legends</div>
-                <div class="player-role">APAC Region</div>
-            </div>
-
-            <div class="team-card">
-                <div class="player-img"></div>
-                <div class="player-name">Street Fighter</div>
-                <div class="player-role">SG</div>
-            </div>
-        </section>
-
-
-        <!-- ======================================== -->
-        <!--              TEAM CAROUSEL               -->
-        <!-- ======================================== -->
+        <!-- Team Carousel -->
         <section class="team-carousel-section reveal">
             <h2 class="carousel-title">Explore Each Team</h2>
 
@@ -162,25 +129,25 @@
                 <div class="carousel" id="teamCarousel">
 
                     <div class="carousel-card">
-                        <div class="player-img"></div>
+                        <div class="player-img" id="valorant-img-c"></div>
                         <div class="player-name">VALORANT</div>
                         <div class="player-role">APAC Region</div>
                     </div>
 
                     <div class="carousel-card">
-                        <div class="player-img"></div>
+                        <div class="player-img" id="mlbb-img-c"></div>
                         <div class="player-name">MLBB</div>
                         <div class="player-role">SG</div>
                     </div>
 
                     <div class="carousel-card">
-                        <div class="player-img"></div>
+                        <div class="player-img" id="lol-img-c"></div>
                         <div class="player-name">League of Legends</div>
                         <div class="player-role">APAC Region</div>
                     </div>
 
                     <div class="carousel-card">
-                        <div class="player-img"></div>
+                        <div class="player-img" id="sf-img-c"></div>
                         <div class="player-name">Street Fighter</div>
                         <div class="player-role">SG</div>
                     </div>
@@ -190,69 +157,20 @@
                 <button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>
             </div>
         </section>
-        
-<section class="team-carousel-section reveal">
-    <h2 class="carousel-title">Explore Each Team</h2>
 
-    <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="scrollCarousel(-1)">❮</button>
+    </main>
 
-        <div class="carousel" id="teamCarousel">
-
-            <div class="carousel-card">
-                <div class="player-img"></div>
-                <div class="player-name">VALORANT</div>
-                <div class="player-role">APAC Region</div>
-            </div>
-
-            <div class="carousel-card">
-                <div class="player-img"></div>
-                <div class="player-name">MLBB</div>
-                <div class="player-role">SG</div>
-            </div>
-
-            <div class="carousel-card">
-                <div class="player-img"></div>
-                <div class="player-name">League of Legends</div>
-                <div class="player-role">APAC Region</div>
-            </div>
-
-            <div class="carousel-card">
-                <div class="player-img"></div>
-                <div class="player-name">Street Fighter</div>
-                <div class="player-role">SG</div>
-            </div>
-
-        </div>
-
-        <button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>
-    </div>
-</section>
-
-
-    <!-- ✅ JAVASCRIPT (SIDEBAR + SCROLL REVEALS) -->
     <script>
-        function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("open");
-        }
+        // Insert external images by ID
+        document.getElementById("valorant-img").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYZJAyyg6uVWS6UEaQuunG5sd71o8ocTdRg&s')";
+        document.getElementById("mlbb-img").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg6P68cEuqvSSqpZBo83MDEWGEbCnXJlNPtg&s')";
+        document.getElementById("lol-img").style.backgroundImage = "url('https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png')";
+        document.getElementById("sf-img").style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png')";
 
-        // SCROLL ANIMATION
-        const reveals = document.querySelectorAll(".reveal");
-
-        function animateOnScroll() {
-            for (let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const revealTop = reveals[i].getBoundingClientRect().top;
-                const revealPoint = 120;
-
-                if (revealTop < windowHeight - revealPoint) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", animateOnScroll);
-        animateOnScroll();
+        document.getElementById("valorant-img-c").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYZJAyyg6uVWS6UEaQuunG5sd71o8ocTdRg&s')";
+        document.getElementById("mlbb-img-c").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg6P68cEuqvSSqpZBo83MDEWGEbCnXJlNPtg&s')";
+        document.getElementById("lol-img-c").style.backgroundImage = "url('https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png')";
+        document.getElementById("sf-img-c").style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png')";
     </script>
 
 </body>
