@@ -4,39 +4,317 @@
     <meta charset="UTF-8">
     <title>Contact – Singularity E-Sports</title>
 
+    <!-- MAIN STYLES -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- SOCIAL ICONS (Feather Icons) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Main Contact Wrapper */
+        .contact-container {
+            max-width: 900px;
+            margin: 90px auto 40px auto;
+            padding: 35px;
+            background: #1e293b;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .contact-container h1 {
+            text-align: center;
+            font-family: "Orbitron", sans-serif;
+            margin-bottom: 25px;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .contact-info a {
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            border: none;
+            background: #0f172a;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.25s;
+            box-shadow: inset 0 0 0 0 rgba(124,58,237,0.2);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            box-shadow: inset 0 0 0 2px #7c3aed;
+        }
+
+        .contact-form textarea {
+            height: 140px;
+            resize: none;
+        }
+
+        .send-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            padding: 14px 34px;
+            border-radius: 999px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(124,58,237,0.5);
+        }
+
+        /* Social Section */
+        .social-section {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            transition: 0.25s ease;
+        }
+
+        .social-icons a:hover {
+            color: #7c3aed;
+        }
+
+        /* Success Popup */
+        .success-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.6);
+            background: #1e293b;
+            padding: 40px 55px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(124, 58, 237, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+            z-index: 9999;
+        }
+
+        .success-popup.active {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
+        }
+
+        .success-popup button {
+            margin-top: 15px;
+            background: #7c3aed;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Discord widget */
+        .discord-widget {
+            margin-top: 40px;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        /* Map Section */
+        .map-wrapper {
+            margin-top: 45px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
 </head>
 
 <body>
 
+    <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
         <a href="#" class="close-btn" onclick="toggleSidebar()">×</a>
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="teams.html">Teams</a>
         <a href="tournaments.html">Tournaments</a>
         <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
+        <a class="active" href="contact.html">Contact</a>
     </div>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="hamburger" onclick="toggleSidebar()">
                 <span></span><span></span><span></span>
             </div>
         </div>
+
         <div class="nav-title">Singularity E-Sports</div>
-        <div class="nav-right"><div class="profile-circle"></div></div>
+
+        <div class="nav-right">
+            <div class="profile-circle"></div>
+        </div>
     </nav>
 
-    <div class="page-content">
-        <h1>Contact</h1>
-        <p>You can reach us at: singularity-esports@example.com</p>
+    <!-- SUCCESS POPUP -->
+    <div class="success-popup" id="successPopup">
+        <h2>Message Sent!</h2>
+        <p>We will get back to you shortly.</p>
+        <button onclick="closePopup()">Close</button>
     </div>
 
+    <!-- MAIN CONTENT -->
+    <main class="contact-container reveal">
+        <h1>Contact Us</h1>
+
+        <div class="contact-info">
+            <p>You can reach us at:</p>
+            <p><a href="mailto:singularity-esports@example.com">singularity-esports@example.com</a></p>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/YOUR-FORMSUBMIT-EMAIL" method="POST">
+
+            <select name="Support Category" required>
+                <option value="" disabled selected>Select Support Category</option>
+                <option>General Inquiry</option>
+                <option>Business / Sponsorship</option>
+                <option>Tournament Support</option>
+                <option>Team Applications</option>
+                <option>Technical Issue</option>
+            </select>
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <button class="send-btn" type="submit">Send Message</button>
+        </form>
+
+        <div class="discord-widget">
+            <iframe
+                src="https://discord.com/widget?id=1356969593876516874&theme=dark"
+                width="100%"
+                height="350"
+                allowtransparency="true"
+                frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+        </div>
+
+        <!-- SOCIAL ICONS -->
+        <div class="social-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i data-feather="youtube"></i></a>
+                <a href="#"><i data-feather="twitter"></i></a>
+                <a href="#"><i data-feather="instagram"></i></a>
+                <a href="#"><i data-feather="message-circle"></i></a>
+            </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="map-wrapper">
+            <iframe 
+                src="https://maps.google.com/maps?q=Singapore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="350" frameborder="0">
+            </iframe>
+        </div>
+    </main>
+
     <script>
+        // Sidebar toggle
         function toggleSidebar() {
             document.getElementById("sidebar").classList.toggle("open");
         }
+
+        // Popup controls
+        function showPopup() {
+            document.getElementById("successPopup").classList.add("active");
+        }
+
+        function closePopup() {
+            document.getElementById("successPopup").classList.remove("active");
+        }
+
+        // FormSubmit + popup
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const fields = form.querySelectorAll("input, textarea, select");
+            for (let f of fields) {
+                if (!f.value.trim()) {
+                    alert("Please fill out all fields.");
+                    return;
+                }
+            }
+
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(form)
+            }).then(() => {
+                form.reset();
+                showPopup();
+            });
+        });
+
+        // Scroll Reveal
+        const reveals = document.querySelectorAll(".reveal");
+        function animateOnScroll() {
+            for (let i = 0; i < reveals.length; i++) {
+                const winH = window.innerHeight;
+                const top = reveals[i].getBoundingClientRect().top;
+                if (top < winH - 120) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", animateOnScroll);
+        animateOnScroll();
+
+        // Feather icons
+        feather.replace();
     </script>
 
 </body>

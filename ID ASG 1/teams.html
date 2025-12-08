@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Teams – Singularity E-Sports</title>
 
-    <!-- Google Fonts -->
+    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Main Styles -->
+    <!-- MAIN STYLES -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Team Card Styles -->
+    <!-- TEAM CARD STYLES -->
     <style>
         .team-grid {
             display: grid;
@@ -35,11 +35,21 @@
         .player-img {
             width: 100%;
             height: 180px;
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
             border-radius: 12px;
             margin-bottom: 15px;
-            background-size: cover;
-            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111827;
+            padding: 10px;
+        }
+
+        .player-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .player-name {
@@ -52,22 +62,74 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
+
+        /* Carousel */
+        .team-carousel-section {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .carousel-card {
+            min-width: 220px;
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .carousel-btn {
+            background: #7c3aed;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background: #5b21b6;
+        }
+
+        .carousel-btn.left {
+            margin-right: 10px;
+        }
+
+        .carousel-btn.right {
+            margin-left: 10px;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">×</button>
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="teams.html">Teams</a>
         <a href="tournaments.html">Tournaments</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="hamburger" onclick="toggleSidebar()">
@@ -82,44 +144,52 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <main class="container">
 
-        <!-- Hero -->
+        <!-- HERO -->
         <section class="hero-box reveal">
             <h2>Our Teams</h2>
         </section>
 
-        <!-- Team Grid -->
+        <!-- TEAM GRID -->
         <section class="team-grid reveal">
 
             <div class="team-card">
-                <div class="player-img" id="valorant-img"></div>
+                <div class="player-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg" alt="Valorant Logo">
+                </div>
                 <div class="player-name">VALORANT</div>
                 <div class="player-role">APAC Region</div>
             </div>
 
             <div class="team-card">
-                <div class="player-img" id="mlbb-img"></div>
+                <div class="player-img">
+                    <img src="https://brandlogos.net/wp-content/uploads/2025/05/mobile_legends-_bang_bang_mlbb-logo_brandlogos.net_ci7it.png" alt="MLBB Logo">
+                </div>
                 <div class="player-name">MLBB</div>
                 <div class="player-role">SG</div>
             </div>
 
             <div class="team-card">
-                <div class="player-img" id="lol-img"></div>
+                <div class="player-img">
+                    <img src="https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png" alt="League of Legends Logo">
+                </div>
                 <div class="player-name">League of Legends</div>
                 <div class="player-role">APAC Region</div>
             </div>
 
             <div class="team-card">
-                <div class="player-img" id="sf-img"></div>
+                <div class="player-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png" alt="Street Fighter Logo">
+                </div>
                 <div class="player-name">Street Fighter</div>
                 <div class="player-role">SG</div>
             </div>
 
         </section>
 
-        <!-- Team Carousel -->
+        <!-- TEAM CAROUSEL -->
         <section class="team-carousel-section reveal">
             <h2 class="carousel-title">Explore Each Team</h2>
 
@@ -129,25 +199,33 @@
                 <div class="carousel" id="teamCarousel">
 
                     <div class="carousel-card">
-                        <div class="player-img" id="valorant-img-c"></div>
+                        <div class="player-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg" alt="Valorant Logo">
+                        </div>
                         <div class="player-name">VALORANT</div>
                         <div class="player-role">APAC Region</div>
                     </div>
 
                     <div class="carousel-card">
-                        <div class="player-img" id="mlbb-img-c"></div>
+                        <div class="player-img">
+                            <img src="https://brandlogos.net/wp-content/uploads/2025/05/mobile_legends-_bang_bang_mlbb-logo_brandlogos.net_ci7it.png" alt="MLBB Logo">
+                        </div>
                         <div class="player-name">MLBB</div>
                         <div class="player-role">SG</div>
                     </div>
 
                     <div class="carousel-card">
-                        <div class="player-img" id="lol-img-c"></div>
+                        <div class="player-img">
+                            <img src="https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png" alt="League of Legends Logo">
+                        </div>
                         <div class="player-name">League of Legends</div>
                         <div class="player-role">APAC Region</div>
                     </div>
 
                     <div class="carousel-card">
-                        <div class="player-img" id="sf-img-c"></div>
+                        <div class="player-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png" alt="Street Fighter Logo">
+                        </div>
                         <div class="player-name">Street Fighter</div>
                         <div class="player-role">SG</div>
                     </div>
@@ -160,17 +238,34 @@
 
     </main>
 
+    <!-- JAVASCRIPT -->
     <script>
-        // Insert external images by ID
-        document.getElementById("valorant-img").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYZJAyyg6uVWS6UEaQuunG5sd71o8ocTdRg&s')";
-        document.getElementById("mlbb-img").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg6P68cEuqvSSqpZBo83MDEWGEbCnXJlNPtg&s')";
-        document.getElementById("lol-img").style.backgroundImage = "url('https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png')";
-        document.getElementById("sf-img").style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png')";
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("open");
+        }
 
-        document.getElementById("valorant-img-c").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYZJAyyg6uVWS6UEaQuunG5sd71o8ocTdRg&s')";
-        document.getElementById("mlbb-img-c").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg6P68cEuqvSSqpZBo83MDEWGEbCnXJlNPtg&s')";
-        document.getElementById("lol-img-c").style.backgroundImage = "url('https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png')";
-        document.getElementById("sf-img-c").style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png')";
+        // SCROLL REVEAL
+        const reveals = document.querySelectorAll(".reveal");
+
+        function animateOnScroll() {
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 120;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", animateOnScroll);
+        animateOnScroll();
+
+        // CAROUSEL SCROLL
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById("teamCarousel");
+            carousel.scrollBy({ left: direction * 300, behavior: "smooth" });
+        }
     </script>
 
 </body>
