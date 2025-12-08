@@ -10,7 +10,7 @@
     <!-- MAIN STYLES -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- TEAM CARD STYLES -->
+    <!-- TEAM CARD + TEXT BOX STYLES -->
     <style>
         .team-grid {
             display: grid;
@@ -25,6 +25,7 @@
             padding: 20px;
             text-align: center;
             transition: 0.3s ease;
+            cursor: pointer;
         }
 
         .team-card:hover {
@@ -63,56 +64,40 @@
             opacity: 0.8;
         }
 
-        /* Carousel */
-        .team-carousel-section {
-            margin-top: 60px;
+        /* ⬇️ TEXT-BOX STYLES */
+        .team-details-section {
+            margin-top: 40px;
+        }
+
+        .details-title {
+            font-family: "Orbitron", sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             text-align: center;
         }
 
-        .carousel-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            gap: 20px;
-            padding: 10px;
-        }
-
-        .carousel-card {
-            min-width: 220px;
+        .team-info-box {
             background: #1e293b;
-            border-radius: 16px;
             padding: 20px;
-            text-align: center;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
+            transition: 0.3s ease;
         }
 
-        .carousel-btn {
-            background: #7c3aed;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            padding: 10px 15px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.2s;
+        .team-info-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(124, 58, 237, 0.45);
         }
 
-        .carousel-btn:hover {
-            background: #5b21b6;
+        .team-info-box h3 {
+            font-family: "Orbitron", sans-serif;
+            margin-bottom: 10px;
         }
 
-        .carousel-btn.left {
-            margin-right: 10px;
-        }
-
-        .carousel-btn.right {
-            margin-left: 10px;
+        .team-info-box p {
+            opacity: 0.9;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -155,7 +140,7 @@
         <!-- TEAM GRID -->
         <section class="team-grid reveal">
 
-            <div class="team-card">
+            <div class="team-card" data-target="valorant">
                 <div class="player-img">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg" alt="Valorant Logo">
                 </div>
@@ -163,7 +148,7 @@
                 <div class="player-role">APAC Region</div>
             </div>
 
-            <div class="team-card">
+            <div class="team-card" data-target="mlbb">
                 <div class="player-img">
                     <img src="https://brandlogos.net/wp-content/uploads/2025/05/mobile_legends-_bang_bang_mlbb-logo_brandlogos.net_ci7it.png" alt="MLBB Logo">
                 </div>
@@ -171,7 +156,7 @@
                 <div class="player-role">SG</div>
             </div>
 
-            <div class="team-card">
+            <div class="team-card" data-target="lol">
                 <div class="player-img">
                     <img src="https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png" alt="League of Legends Logo">
                 </div>
@@ -179,7 +164,7 @@
                 <div class="player-role">APAC Region</div>
             </div>
 
-            <div class="team-card">
+            <div class="team-card" data-target="street-fighter">
                 <div class="player-img">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png" alt="Street Fighter Logo">
                 </div>
@@ -189,56 +174,115 @@
 
         </section>
 
-        <!-- TEAM CAROUSEL -->
-        <section class="team-carousel-section reveal">
-            <h2 class="carousel-title">Explore Each Team</h2>
+        <!-- TEAM DETAILS SECTION -->
+        <section class="team-details-section reveal">
 
-            <div class="carousel-wrapper">
-                <button class="carousel-btn left" onclick="scrollCarousel(-1)">❮</button>
+            <h2 class="details-title">Meet Our Competitive Teams</h2>
 
-                <div class="carousel" id="teamCarousel">
+            <div class="team-info-box" id="valorant">
 
-                    <div class="carousel-card">
-                        <div class="player-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg" alt="Valorant Logo">
-                        </div>
-                        <div class="player-name">VALORANT</div>
-                        <div class="player-role">APAC Region</div>
-                    </div>
+    <div class="text-content">
+        <h3>VALORANT – APAC Region</h3>
+        <p>
+            Our Valorant roster competes at the highest level across the APAC region. 
+            Blending sharp mechanics with disciplined team synergy, they are known for 
+            aggressive executes, tactical coordination, and world-class clutch potential. <br><br>
+            We have achieved a three-peat championship in VCT Champions, and will continue striving for more.
+            <br><br>
+            Team Members:
+            <ul>
+                <li>Reaver - (IGL/Flex Pick)</li>
+                <li>Xenna - (Sentinel)</li>
+                <li>Emerald - (Initiator)</li>
+                <li>Kashuna - (Duelist)</li>
+                <li>Sorrow. - (Controller)</li>
+                <br>
+                Other Team Members:
+                <li>Nova - (Substitute)</li>
+                <li>Akane - (Substitute)</li>
+                <li>Midori - (Coach)</li>
+            </ul>
+        </p>
+    </div>
+</div>
 
-                    <div class="carousel-card">
-                        <div class="player-img">
-                            <img src="https://brandlogos.net/wp-content/uploads/2025/05/mobile_legends-_bang_bang_mlbb-logo_brandlogos.net_ci7it.png" alt="MLBB Logo">
-                        </div>
-                        <div class="player-name">MLBB</div>
-                        <div class="player-role">SG</div>
-                    </div>
 
-                    <div class="carousel-card">
-                        <div class="player-img">
-                            <img src="https://logos-world.net/wp-content/uploads/2023/02/LoL-Symbol.png" alt="League of Legends Logo">
-                        </div>
-                        <div class="player-name">League of Legends</div>
-                        <div class="player-role">APAC Region</div>
-                    </div>
+            <div class="team-info-box" id="mlbb">
+    <img src="https://i.ibb.co/xtj6rTmp/singularity-esports-ml.png" alt="MLBB Team">
 
-                    <div class="carousel-card">
-                        <div class="player-img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png" alt="Street Fighter Logo">
-                        </div>
-                        <div class="player-name">Street Fighter</div>
-                        <div class="player-role">SG</div>
-                    </div>
+    <div class="text-content">
+        <h3>Mobile Legends: Bang Bang – SG</h3>
+        <p>
+            The MLBB division represents Singapore with pride. With meta-breaking drafts 
+            and explosive teamfights, the squad continues to push into national and regional 
+            championships with unwavering consistency.
+            <br><br>
+            Main Team Members:
+            <ul>
+                <li>Cypher - (Gold Lane)</li>
+                <li>Lynnie! - (Mid Lane)</li>
+                <li>Phoenix - (Jungle)</li>
+                <li>Tenkai - (Roamer)</li>
+                <li>Breach - (Exp Lane)</li>
+                <br>
+                Other Team Members:
+                <li>Zephyr - (Substitute)</li>
+                <li>Flow - (Substitute)</li>
+                <li>BlindS1de - (Coach)</li>
+            </ul>
+        </p>
+    </div>
+</div>
 
-                </div>
+            <div class="team-info-box" id="lol">
+    <img src="https://i.ibb.co/pv8dnFHT/singularity-esports-Lo-L.png" alt="League of Legends Team">
 
-                <button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>
-            </div>
-        </section>
+    <div class="text-content">
+        <h3>League of Legends – APAC Region</h3>
+        <p>
+            Our League of Legends team competes across the Asian circuit, taking on 
+            some of the toughest opponents. Known for calculated macro play and 
+            disciplined scaling strategies, they thrive in high-pressure environments.
+            <br><br>
+            Main Team Members:
+            <ul>
+                <li>Void - (Top Lane)</li>
+                <li>Parallax - (Jungle)</li>
+                <li>Mirage - (Mid Lane)</li>
+                <li>Lethal1ty - (AD Carry)</li>
+                <li>Kaze. - (Support)</li>
+                <br>
+                Other Team Members:
+                <li>Lumina - (Substitute)</li>
+                <li>Zealot - (Substitute)</li>
+                <li>Varche - (Coach)</li>
+            </ul>
+        </p>
+    </div>
+</div>
 
-    </main>
 
-    <!-- JAVASCRIPT -->
+            <div class="team-info-box" id="street-fighter">
+    <img src="https://i.ibb.co/Z1hVF1fC/singularity-esports-SF.png" alt="Street Fighter Team">
+
+    <div class="text-content">
+        <h3>Street Fighter – SG</h3>
+        <p>
+            Representing the fighting game community, our Street Fighter division 
+            showcases precision, matchup mastery, and unmatched competitive spirit. 
+            A fan favourite in Singapore’s FGC scene.
+            <br><br>
+            Team Members:
+            <ul>
+                <li>Kuginami - (Main Player)</li>
+                <li>Sankai - (Secondary Player)</li>
+                <li>Suiyuu - (Substitute)</li>
+                <li>Shaouta - (Coach)</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
     <script>
         function toggleSidebar() {
             document.getElementById("sidebar").classList.toggle("open");
@@ -261,11 +305,17 @@
         window.addEventListener("scroll", animateOnScroll);
         animateOnScroll();
 
-        // CAROUSEL SCROLL
-        function scrollCarousel(direction) {
-            const carousel = document.getElementById("teamCarousel");
-            carousel.scrollBy({ left: direction * 300, behavior: "smooth" });
-        }
+        // CARDS CLICK TO SCROLL
+        const teamCards = document.querySelectorAll(".team-card");
+        teamCards.forEach(card => {
+            card.addEventListener("click", () => {
+                const targetId = card.getAttribute("data-target");
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        });
     </script>
 
 </body>
