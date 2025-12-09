@@ -2,116 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tournaments – Singularity E-Sports</title>
+    <title>Tournaments - Singularity E-Sports</title>
 
-    <!-- GOOGLE FONTS -->
+    <!-- Imported Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- MAIN STYLES -->
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* REVEAL ANIMATION */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* MATCH TABS */
-        .match-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            margin: 25px auto;
-        }
-
-        .match-tab-btn {
-            padding: 12px 22px;
-            border: none;
-            background: rgba(255,255,255,0.15);
-            color: white;
-            font-size: 1rem;
-            font-family: "Orbitron", sans-serif;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-
-        .match-tab-btn.active,
-        .match-tab-btn:hover {
-            background: rgba(255,255,255,0.35);
-        }
-
-        /* TAB CONTENT */
-        .match-tab-content {
-            display: none;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .match-tab-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* IMPROVED TABLE STYLING */
-        .tournament-table {
-            width: 100%;
-            margin-top: 10px;
-            border-collapse: separate;
-            border-spacing: 0 12px;
-            font-size: 1.1rem;
-            color: white;
-        }
-
-        .tournament-table tr {
-            background: rgba(0,0,0,0.45);
-        }
-
-        .tournament-table th,
-        .tournament-table td {
-            padding: 18px 22px;
-            text-align: center;
-            line-height: 1.6;
-            vertical-align: middle;
-        }
-
-        .tournament-table th {
-            font-family: "Orbitron", sans-serif;
-            font-size: 1.15rem;
-            background: rgba(255,255,255,0.2);
-        }
-
-        .tournament-table tr td {
-            border-top: 1px solid rgba(255,255,255,0.15);
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-        }
-
-        .tournament-table tr:hover {
-            background: rgba(255,255,255,0.12);
-            transition: 0.25s ease;
-        }
-
-        .section-title {
-            font-family: "Orbitron", sans-serif;
-            text-align: center;
-            font-size: 1.6rem;
-            margin-bottom: 12px;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">×</button>
         <a href="index.html">Home</a>
@@ -121,7 +23,7 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="hamburger" onclick="toggleSidebar()">
@@ -138,18 +40,17 @@
 
 <main class="container">
 
-    <!-- HERO -->
+    <!-- Upcoming/Past Tournaments Tab -->
     <section class="hero-box reveal">
         <h2>Upcoming Tournaments/Tournament History</h2>
     </section>
 
-    <!-- TEAM IMAGE -->
-    <section class="top-image-section reveal" style="text-align:center; margin-top:20px;">
-        <img src="https://i.ibb.co/Q3GgrXWb/singularity-esports.png"
-        style="max-width:100%; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.4);">
+    <!-- A pic that I inserted to improve the aesthetics -->
+    <section class="top-image-section reveal">
+        <img src="https://i.ibb.co/Q3GgrXWb/singularity-esports.png" class="tournament-top-image">
     </section>
 
-    <!-- MATCH TABS (NOW BELOW IMAGE) -->
+    <!-- Tournament Tab for each team -->
     <section class="match-tabs reveal">
         <button class="match-tab-btn active" data-tab="valorant">VALORANT</button>
         <button class="match-tab-btn" data-tab="mlbb">MLBB</button>
@@ -157,15 +58,14 @@
         <button class="match-tab-btn" data-tab="street">Street Fighter</button>
     </section>
 
-    <!-- MATCH TABLES -->
-    <section class="match-table-section reveal" style="max-width:1050px; margin:25px auto 40px auto;">
+    <!-- Match Tables -->
+    <section class="match-table-section reveal">
 
         <!-- VALORANT -->
         <div class="match-tab-content active" id="valorant">
             <h3 class="section-title">VALORANT Match Highlights</h3>
 
             <table class="tournament-table">
-
                 <tr>
                     <th>Team</th>
                     <th>Opponent</th>
@@ -200,7 +100,6 @@
                     <td>13-15 (L) / 13-6 (W) / 13-8 (W) / 13-9 (W)<br>BO5: 3-1 (W)</td>
                     <td>VCT Champions Shanghai Finals 2024</td>
                 </tr>
-
             </table>
         </div>
 
@@ -239,7 +138,7 @@
             </table>
         </div>
 
-        <!-- LOL -->
+        <!-- LoL -->
         <div class="match-tab-content" id="lol">
             <h3 class="section-title">League of Legends Match Highlights</h3>
 
@@ -268,7 +167,7 @@
             </table>
         </div>
 
-        <!-- STREET FIGHTER -->
+        <!-- Street Fighter -->
         <div class="match-tab-content" id="street">
             <h3 class="section-title">Street Fighter Match Highlights</h3>
 
@@ -298,48 +197,10 @@
         </div>
 
     </section>
-
-    <!-- LOWER SECTION -->
-    <section class="lower-section">
-        <div class="text-box reveal">
-            <p>Stay up to date with our latest tournament news.</p>
-        </div>
-    </section>
-
 </main>
 
-<!-- JAVASCRIPT -->
-<script>
-    function toggleSidebar() {
-        document.getElementById("sidebar").classList.toggle("open");
-    }
-
-    // REVEAL SCRIPT
-    const reveals = document.querySelectorAll(".reveal");
-    function checkReveal() {
-        reveals.forEach(el => {
-            if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-                el.classList.add("active");
-            }
-        });
-    }
-    window.addEventListener("scroll", checkReveal);
-    checkReveal();
-
-    // TAB SWITCHING
-    const tabButtons = document.querySelectorAll(".match-tab-btn");
-    const tabContents = document.querySelectorAll(".match-tab-content");
-
-    tabButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            tabButtons.forEach(b => b.classList.remove("active"));
-            tabContents.forEach(c => c.classList.remove("active"));
-
-            btn.classList.add("active");
-            document.getElementById(btn.dataset.tab).classList.add("active");
-        });
-    });
-</script>
+<!-- Javascript -->
+<script src="tournaments.js"></script>
 
 </body>
 </html>

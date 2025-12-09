@@ -5,158 +5,19 @@
     <title>Singularity E-Sports</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- GOOGLE FONTS -->
+    <!-- Imported Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- MAIN STYLES -->
+    <!-- Style -->
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* 🔥 NEW — BACKGROUND IMAGE (40% opacity) */
-        .background-img {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://i.ibb.co/0jZxtvJD/singularitybglandscape.png') no-repeat center center / cover;
-            opacity: 0.3;  /* 30% opacity */
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        /* GLOBAL BACKGROUND GRADIENT */
-        body {
-            font-family: 'Rajdhani', sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-            background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb, #b21fdb);
-            background-size: 200% 200%;
-            animation: subtleShimmer 30s ease infinite;
-        }
-
-        @keyframes subtleShimmer {
-            0% { background-position: 0 0; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0 0; }
-        }
-
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; }
-
-        /* NAV + SIDEBAR */
-        .sidebar { position: fixed; top:0; left:-250px; width:250px; height:100%; background:#111; padding-top:60px; transition:.3s; z-index:10; }
-        .sidebar.open { left:0; }
-        .sidebar a { color:#fff; display:block; padding:12px 20px; text-decoration:none; }
-        .sidebar a:hover { background:#333; }
-        .close-btn { font-size:28px; position:absolute; top:10px; right:15px; color:#fff; }
-
-        .navbar {
-            display:flex; justify-content:space-between; padding:15px 20px;
-            background:rgba(0,0,0,0.5); position:sticky; top:0; z-index:5;
-        }
-        .hamburger span { display:block; width:25px; height:3px; background:#fff; margin:3px 0; }
-        .nav-title { color:#fff; font-size:1.8rem; }
-
-        /* REVEAL ANIMATION */
-        .reveal { opacity:0; transform:translateY(50px); transition:0.8s; }
-        .reveal.active { opacity:1; transform:translateY(0); }
-
-        /* HERO */
-        .hero-box { text-align:center; padding:90px 20px; }
-        .hero-box h2 {
-            font-size:3rem; color:#fff;
-            text-shadow:0 0 18px rgba(255,255,255,0.5);
-        }
-
-        /* CAROUSEL */
-        .carousel {
-            margin:40px auto; max-width:900px;
-            background:rgba(0,0,0,0.45); border-radius:14px;
-            padding:25px; color:#fff; backdrop-filter:blur(5px);
-            box-shadow:0 0 25px rgba(0,0,0,0.4);
-            position: relative;
-        }
-
-        .carousel-tabs {
-            display:flex; justify-content:center; margin-bottom:20px;
-        }
-
-        .tab-btn {
-            padding:10px 20px; border:none; cursor:pointer;
-            background:rgba(255,255,255,0.15); color:#fff; margin:0 6px;
-            border-radius:8px; font-family:'Orbitron';
-            transition:0.3s;
-        }
-        .tab-btn.active, .tab-btn:hover { background:rgba(255,255,255,0.35); }
-
-        /* FIXED CAROUSEL LAYERING */
-        .carousel-content { position: relative; min-height: 80px; }
-        .tab-content {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.6s ease;
-            pointer-events: none;
-        }
-        .tab-content.active {
-            opacity: 1;
-            pointer-events: auto;
-            position: relative;
-        }
-
-        .carousel-text { font-size:1.4rem; }
-        .carousel-clickable { color:white; cursor:pointer; transition:0.3s; }
-        .carousel-clickable:hover { color:#ffd700; text-decoration:underline; }
-
-        /* LOWER SECTION */
-        .lower-section {
-            background:rgba(0,0,0,0.32); padding:25px;
-            border-radius:14px; max-width:900px;
-            margin:20px auto; color:#f1f1f1; font-size:1.3rem;
-            text-align:center; backdrop-filter:blur(5px);
-            box-shadow:0 0 20px rgba(0,0,0,0.35);
-        }
-
-        /* FEATURED HIGHLIGHTS */
-        .highlights {
-            max-width:1000px; margin:40px auto; padding:20px;
-            display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-            gap:20px;
-        }
-        .highlight-card {
-            background:rgba(0,0,0,0.45); padding:20px;
-            border-radius:14px; color:white;
-            box-shadow:0 0 20px rgba(0,0,0,0.4);
-            transition:0.3s; text-align:center;
-            backdrop-filter:blur(5px);
-        }
-        .highlight-card:hover {
-            transform:translateY(-5px);
-            box-shadow:0 0 25px rgba(255,215,0,0.5);
-        }
-        .highlight-card h3 { color:#ffd700; margin-bottom:10px; }
-
-        /* FOOTER */
-        footer {
-            margin-top:50px; padding:30px; text-align:center;
-            color:white; background:rgba(0,0,0,0.4);
-            backdrop-filter:blur(5px);
-        }
-        .social-icons img {
-            width:32px; margin:0 10px; filter:invert(100%);
-            opacity:0.8; transition:0.2s;
-        }
-        .social-icons img:hover { opacity:1; transform:scale(1.1); }
-    </style>
 </head>
 
 <body>
 
-    <!-- 🔥 INSERTED BACKGROUND IMAGE -->
+    <!-- Background Image -->
     <div class="background-img"></div>
 
-    <!-- SIDEBAR -->
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <a href="#" class="close-btn" onclick="toggleSidebar()">×</a>
         <a href="index.html" class="active">Home</a>
@@ -166,7 +27,7 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="hamburger" onclick="toggleSidebar()">
@@ -177,15 +38,15 @@
         <div class="nav-right"><div class="profile-circle"></div></div>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- Main Page Content -->
     <main class="container">
 
-        <!-- HERO -->
+        <!-- Textbox -->
         <section class="hero-box reveal">
             <h2>Welcome to Singularity E-Sports</h2>
         </section>
 
-        <!-- CAROUSEL -->
+        <!-- Carousel -->
         <section class="carousel reveal">
             <div class="carousel-tabs">
                 <button class="tab-btn active" data-tab="0">Today</button>
@@ -194,8 +55,8 @@
 
             <div class="carousel-content">
                 <div class="tab-content active">
-                    <div class="carousel-clickable" onclick="location.href='teams.html'">
-                        <p class="carousel-text">Singularity VALORANT becomes World Champs once again!</p>
+                    <div class="carousel-clickable" onclick="location.href='tournaments.html'">
+                        <p class="carousel-text">Singularity VALORANT on their 4th Championship run!</p>
                     </div>
                 </div>
 
@@ -207,7 +68,7 @@
             </div>
         </section>
 
-        <!-- HIGHLIGHTS -->
+        <!-- Highlights -->
         <section class="highlights reveal">
             <div class="highlight-card">
                 <h3>🔥 Latest Victory</h3>
@@ -225,7 +86,7 @@
             </div>
         </section>
 
-        <!-- LOWER SECTION -->
+        <!-- Lower Section -->
         <section class="lower-section reveal">
             <p>At Singularity E-Sports, passion meets discipline and ambition fuels excellence.</p>
         </section>
@@ -233,59 +94,12 @@
         <!-- FOOTER -->
         <footer class="reveal">
             <p>© 2025 Singularity E-Sports — All Rights Reserved</p>
-            <div class="social-icons">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174876.png">
-            </div>
         </footer>
 
     </main>
 
-<script>
-    function toggleSidebar() {
-        document.getElementById("sidebar").classList.toggle("open");
-    }
-
-    // Reveal animation
-    const reveals = document.querySelectorAll(".reveal");
-    function animateOnScroll() {
-        reveals.forEach(el => {
-            if (el.getBoundingClientRect().top < window.innerHeight - 120) {
-                el.classList.add("active");
-            }
-        });
-    }
-    window.addEventListener("scroll", animateOnScroll);
-    animateOnScroll();
-
-    // CAROUSEL FIXED
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-    let index = 0;
-
-    function showTab(i) {
-        tabButtons.forEach((b) => b.classList.remove("active"));
-        tabContents.forEach((c) => c.classList.remove("active"));
-
-        tabButtons[i].classList.add("active");
-        tabContents[i].classList.add("active");
-    }
-
-    // Auto-slide
-    setInterval(() => {
-        index = (index + 1) % tabButtons.length;
-        showTab(index);
-    }, 5000);
-
-    // Manual click
-    tabButtons.forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-            index = i;
-            showTab(i);
-        });
-    });
-</script>
+    <!-- Javascript -->
+    <script src="index.js"></script>
 
 </body>
 </html>

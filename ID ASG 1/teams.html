@@ -2,109 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Teams – Singularity E-Sports</title>
+    <title>Teams - Singularity E-Sports</title>
 
-    <!-- GOOGLE FONTS -->
+    <!-- Imported Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- MAIN STYLES -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- TEAM CARD + TEXT BOX STYLES -->
-    <style>
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .team-card {
-            background: #1e293b;
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            transition: 0.3s ease;
-            cursor: pointer;
-        }
-
-        .team-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.5);
-        }
-
-        .player-img {
-            width: 100%;
-            height: 180px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: #111827;
-            padding: 10px;
-        }
-
-        .player-img img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .player-name {
-            font-family: "Orbitron", sans-serif;
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-        }
-
-        .player-role {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* ⬇️ TEXT-BOX STYLES */
-        .team-details-section {
-            margin-top: 40px;
-        }
-
-        .details-title {
-            font-family: "Orbitron", sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .team-info-box {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 14px;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
-            transition: 0.3s ease;
-        }
-
-        .team-info-box:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 35px rgba(124, 58, 237, 0.45);
-        }
-
-        .team-info-box h3 {
-            font-family: "Orbitron", sans-serif;
-            margin-bottom: 10px;
-        }
-
-        .team-info-box p {
-            opacity: 0.9;
-            line-height: 1.5;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">×</button>
         <a href="index.html">Home</a>
@@ -114,7 +22,7 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="hamburger" onclick="toggleSidebar()">
@@ -129,15 +37,14 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <main class="container">
 
-        <!-- HERO -->
+        <!-- Teams Section -->
         <section class="hero-box reveal">
             <h2>Our Teams</h2>
         </section>
 
-        <!-- TEAM GRID -->
+        <!-- Team Information Section -->
         <section class="team-grid reveal">
 
             <div class="team-card" data-target="valorant">
@@ -153,7 +60,7 @@
                     <img src="https://brandlogos.net/wp-content/uploads/2025/05/mobile_legends-_bang_bang_mlbb-logo_brandlogos.net_ci7it.png" alt="MLBB Logo">
                 </div>
                 <div class="player-name">MLBB</div>
-                <div class="player-role">SG</div>
+                <div class="player-role">Singapore</div>
             </div>
 
             <div class="team-card" data-target="lol">
@@ -169,154 +76,123 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png" alt="Street Fighter Logo">
                 </div>
                 <div class="player-name">Street Fighter</div>
-                <div class="player-role">SG</div>
+                <div class="player-role">Singapore</div>
             </div>
 
         </section>
 
-        <!-- TEAM DETAILS SECTION -->
+        <!-- Team descriptions -->
         <section class="team-details-section reveal">
 
             <h2 class="details-title">Meet Our Competitive Teams</h2>
 
             <div class="team-info-box" id="valorant">
-
-    <div class="text-content">
-        <h3>VALORANT – APAC Region</h3>
-        <p>
-            Our Valorant roster competes at the highest level across the APAC region. 
-            Blending sharp mechanics with disciplined team synergy, they are known for 
-            aggressive executes, tactical coordination, and world-class clutch potential. <br><br>
-            We have achieved a three-peat championship in VCT Champions, and will continue striving for more.
-            <br><br>
-            Team Members:
-            <ul>
-                <li>Reaver - (IGL/Flex Pick)</li>
-                <li>Xenna - (Sentinel)</li>
-                <li>Emerald - (Initiator)</li>
-                <li>Kashuna - (Duelist)</li>
-                <li>Sorrow. - (Controller)</li>
-                <br>
-                Other Team Members:
-                <li>Nova - (Substitute)</li>
-                <li>Akane - (Substitute)</li>
-                <li>Midori - (Coach)</li>
-            </ul>
-        </p>
-    </div>
-</div>
-
+                <div class="text-content">
+                    <h3>VALORANT - APAC Region</h3>
+                    <p>
+                        Our Valorant roster competes at the highest level across the APAC region. 
+                        Blending sharp mechanics with disciplined team synergy, they are known for 
+                        aggressive executes, tactical coordination, and world-class clutch potential. <br><br>
+                        We have achieved a three-peat championship in VCT Champions, and will continue striving for more.
+                        <br><br>
+                        Team Members:
+                        <ul>
+                            <li>Reaver - (IGL/Flex Pick)</li>
+                            <li>Xenna - (Sentinel)</li>
+                            <li>Emerald - (Initiator)</li>
+                            <li>Kashuna - (Duelist)</li>
+                            <li>Sorrow. - (Controller)</li>
+                            <br>
+                            Other Team Members:
+                            <li>Nova - (Substitute)</li>
+                            <li>Akane - (Substitute)</li>
+                            <li>Midori - (Coach)</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
 
             <div class="team-info-box" id="mlbb">
-    <img src="https://i.ibb.co/xtj6rTmp/singularity-esports-ml.png" alt="MLBB Team">
+                <img src="https://i.ibb.co/xtj6rTmp/singularity-esports-ml.png" alt="MLBB Team">
 
-    <div class="text-content">
-        <h3>Mobile Legends: Bang Bang – SG</h3>
-        <p>
-            The MLBB division represents Singapore with pride. With meta-breaking drafts 
-            and explosive teamfights, the squad continues to push into national and regional 
-            championships with unwavering consistency.
-            <br><br>
-            Main Team Members:
-            <ul>
-                <li>Cypher - (Gold Lane)</li>
-                <li>Lynnie! - (Mid Lane)</li>
-                <li>Phoenix - (Jungle)</li>
-                <li>Tenkai - (Roamer)</li>
-                <li>Breach - (Exp Lane)</li>
-                <br>
-                Other Team Members:
-                <li>Zephyr - (Substitute)</li>
-                <li>Flow - (Substitute)</li>
-                <li>BlindS1de - (Coach)</li>
-            </ul>
-        </p>
-    </div>
-</div>
+                <div class="text-content">
+                    <h3>Mobile Legends: Bang Bang - SG</h3>
+                    <p>
+                        The MLBB division represents Singapore with pride. With meta-breaking drafts 
+                        and explosive teamfights, the squad continues to push into national and regional 
+                        championships with unwavering consistency.
+                        <br><br>
+                        Main Team Members:
+                        <ul>
+                            <li>Cypher - (Gold Lane)</li>
+                            <li>Lynnie! - (Mid Lane)</li>
+                            <li>Phoenix - (Jungle)</li>
+                            <li>Tenkai - (Roamer)</li>
+                            <li>Breach - (Exp Lane)</li>
+                            <br>
+                            Other Team Members:
+                            <li>Zephyr - (Substitute)</li>
+                            <li>Flow - (Substitute)</li>
+                            <li>BlindS1de - (Coach)</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
 
             <div class="team-info-box" id="lol">
-    <img src="https://i.ibb.co/pv8dnFHT/singularity-esports-Lo-L.png" alt="League of Legends Team">
+                <img src="https://i.ibb.co/pv8dnFHT/singularity-esports-Lo-L.png" alt="League of Legends Team">
 
-    <div class="text-content">
-        <h3>League of Legends – APAC Region</h3>
-        <p>
-            Our League of Legends team competes across the Asian circuit, taking on 
-            some of the toughest opponents. Known for calculated macro play and 
-            disciplined scaling strategies, they thrive in high-pressure environments.
-            <br><br>
-            Main Team Members:
-            <ul>
-                <li>Void - (Top Lane)</li>
-                <li>Parallax - (Jungle)</li>
-                <li>Mirage - (Mid Lane)</li>
-                <li>Lethal1ty - (AD Carry)</li>
-                <li>Kaze. - (Support)</li>
-                <br>
-                Other Team Members:
-                <li>Lumina - (Substitute)</li>
-                <li>Zealot - (Substitute)</li>
-                <li>Varche - (Coach)</li>
-            </ul>
-        </p>
-    </div>
-</div>
-
+                <div class="text-content">
+                    <h3>League of Legends - APAC Region</h3>
+                    <p>
+                        Our League of Legends team competes across the Asian circuit, taking on 
+                        some of the toughest opponents. Known for calculated macro play and 
+                        disciplined scaling strategies, they thrive in high-pressure environments.
+                        <br><br>
+                        Main Team Members:
+                        <ul>
+                            <li>Void - (Top Lane)</li>
+                            <li>Parallax - (Jungle)</li>
+                            <li>Mirage - (Mid Lane)</li>
+                            <li>Lethal1ty - (AD Carry)</li>
+                            <li>Kaze. - (Support)</li>
+                            <br>
+                            Other Team Members:
+                            <li>Lumina - (Substitute)</li>
+                            <li>Zealot - (Substitute)</li>
+                            <li>Varche - (Coach)</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
 
             <div class="team-info-box" id="street-fighter">
-    <img src="https://i.ibb.co/Z1hVF1fC/singularity-esports-SF.png" alt="Street Fighter Team">
+                <img src="https://i.ibb.co/Z1hVF1fC/singularity-esports-SF.png" alt="Street Fighter Team">
 
-    <div class="text-content">
-        <h3>Street Fighter – SG</h3>
-        <p>
-            Representing the fighting game community, our Street Fighter division 
-            showcases precision, matchup mastery, and unmatched competitive spirit. 
-            A fan favourite in Singapore’s FGC scene.
-            <br><br>
-            Team Members:
-            <ul>
-                <li>Kuginami - (Main Player)</li>
-                <li>Sankai - (Secondary Player)</li>
-                <li>Suiyuu - (Substitute)</li>
-                <li>Shaouta - (Coach)</li>
-            </ul>
-        </p>
-    </div>
-</div>
+                <div class="text-content">
+                    <h3>Street Fighter - SG</h3>
+                    <p>
+                        Representing the fighting game community, our Street Fighter division 
+                        showcases precision, matchup mastery, and unmatched competitive spirit. 
+                        A fan favourite in Singapore's FGC scene.
+                        <br><br>
+                        Team Members:
+                        <ul>
+                            <li>Kuginami - (Main Player)</li>
+                            <li>Sankai - (Secondary Player)</li>
+                            <li>Suiyuu - (Substitute)</li>
+                            <li>Shaouta - (Coach)</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
 
-    <script>
-        function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("open");
-        }
+        </section>
 
-        // SCROLL REVEAL
-        const reveals = document.querySelectorAll(".reveal");
+    </main>
 
-        function animateOnScroll() {
-            for (let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const revealTop = reveals[i].getBoundingClientRect().top;
-                const revealPoint = 120;
-
-                if (revealTop < windowHeight - revealPoint) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", animateOnScroll);
-        animateOnScroll();
-
-        // CARDS CLICK TO SCROLL
-        const teamCards = document.querySelectorAll(".team-card");
-        teamCards.forEach(card => {
-            card.addEventListener("click", () => {
-                const targetId = card.getAttribute("data-target");
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-            });
-        });
-    </script>
+    <!-- Javascript -->
+    <script src="teams.js"></script>
 
 </body>
 </html>
